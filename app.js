@@ -38,13 +38,11 @@ form.addEventListener('submit', buyProduct);
 function buyProduct(event) {
   product = event.target.products.value;
   for (var i = 0; i < productArray.length; i++){
-    console.log(productArray);
-    if productArray[i].id = product {
+    if (productArray[i].id = product) {
       orderedProducts.push(products[i]);
     }
   }
 }
-
 
 //////////////FOR THE CART PAGE//////////////////////////
 // //for every item in the orderedProducts array do this process:
