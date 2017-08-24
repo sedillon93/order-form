@@ -38,6 +38,5 @@ for (var i = 0; i < orderedProducts.length; i++){
   body.appendChild(div);
 //create img element for product image
   var image = document.createElement('img');
-  //replace imagePath with correct path for images
-  image.setAttribute('src', imagePath);
+  image.setAttribute('src', orderedProducts[i].path);
 }
