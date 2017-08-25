@@ -33,15 +33,15 @@ var productArray = [bag, banana, bathroom, boots, breakfast, bubblegum, chair, c
 //////////////FOR THE CART PAGE//////////////////////////
 //check to see if there are any ordered products in local storage
 function ordersPresent(){
-  if (localStorage.getAttribute('ordered')){
-    orderedProducts = JSON.parse(localStorage.getAttribute('ordered'));
+  if (localStorage.getItem('ordered')){
+    orderedProducts = JSON.parse(localStorage.getItem('ordered'));
   }
-  else {
-    var body = document.getElementById('cart');
-    var p = document.createElement('p');
-    p.innerText = 'Your cart is empty. To select a product go back to the order form.';
-    body.appendChild(p);
-  }
+  // else {
+  //   var body = document.getElementById('cart');
+  //   var p = document.createElement('p');
+  //   p.innerText = 'Your cart is empty. To select a product go back to the order form.';
+  //   body.appendChild(p);
+  // }
 }
 ordersPresent();
 //for every item in the orderedProducts array do this process:
@@ -66,12 +66,15 @@ form.addEventListener('submit', buyProduct);
 //check what product was ordered
 function buyProduct(event) {
   event.preventDefault();
+  console.log(event.target);
+  console.log(event.target.fieldset);
   product = event.target.products.value;
   for (var i = 0; i < productArray.length; i++){
     if (productArray[i].id = product) {
       orderedProducts.push(productArray[i]);
     }
   }
-  localStorage.setAttribute('ordered', JSON.stringify(orderedProducts));
+  localStorage.setItem('ordered', JSON.stringify(orderedProducts));
+  console.log(localStorage.setItem('ordered', JSON.stringify(orderedProducts)));
   form.reset;
 }
