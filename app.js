@@ -41,16 +41,17 @@ var productArray = [bag, banana, bathroom, boots, breakfast, bubblegum, chair, c
 // }
 
 //check to see if there are any ordered products in local storage
-if (localStorage.getAttribute('ordered')){
-  orderedProducts = JSON.parse(localStorage.getAttribute('ordered'));
+function ordersPresent(){
+  if (localStorage.getAttribute('ordered')){
+    orderedProducts = JSON.parse(localStorage.getAttribute('ordered'));
+  }
+  else {
+    var body = document.getElementById('cart');
+    var p = document.createElement('p');
+    p.innerText = 'Your cart is empty. To select a product go back to the order form.';
+    body.appendChild(p);
+  }
 }
-else {
-  var body = document.getElementById('cart');
-  var p = document.createElement('p');
-  p.innerText = 'Your cart is empty. To select a product go back to the order form.';
-  body.appendChild(p);
-}
-
 ///////////FOR THE ORDER PAGE///////////////////////////
 var form = document.getElementById('form');
 form.addEventListener('submit', buyProduct);
