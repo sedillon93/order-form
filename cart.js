@@ -48,6 +48,7 @@ var body = document.getElementById('cart');
 for (var i = 0; i < orderedProducts.length; i++){
 // create div to hold ordered product info and add to body
   var div = document.createElement('div');
+  div.setAttribute('id', orderedProducts[i].id);
   var image = document.createElement('img');
   image.setAttribute('src', orderedProducts[i].path);
   var prodName = document.createElement('p');
@@ -56,7 +57,7 @@ for (var i = 0; i < orderedProducts.length; i++){
   var button = document.createElement('button');
   button.setAttribute('class', 'remove');
   button.innerText = 'Remove from cart';
-  button.setAttribute('id',orderedProducts[i].id);
+  button.setAttribute('id', orderedProducts[i].id);
   div.appendChild(button);
   div.appendChild(image);
   div.appendChild(prodName);
@@ -67,14 +68,15 @@ for (var i = 0; i < orderedProducts.length; i++){
 function deleteItem(event){
   var id = event.target.id;
   for (var i = 0; i < orderedProducts.length; i++){
-    if (orderedProducts[i] === id) {
-      var item = orderedProducts[i];
+    if (orderedProducts[i].id === id) {
+      var item = document.getElementById(orderedProducts[i]);
+      body.removeChild(item);
       console.log(item);
     }
   }
 }
 
 var buttons = document.getElementsByClassName('remove');
-for (var i = 0; i < buttons.length; i ++){
+for (var i = 0; i < buttons.length; i++){
   button.addEventListener('click', deleteItem);
 }
