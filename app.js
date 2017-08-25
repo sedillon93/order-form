@@ -30,20 +30,6 @@ var wineGlass = new Product('Wine glass', 'wineGlass', 'img/wine-glass.jpg');
 
 var productArray = [bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulhu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep, tauntaun, unicorn, usb, waterCan, wineGlass];
 
-///////////FOR THE ORDER PAGE///////////////////////////
-var form = document.getElementById('form');
-form.addEventListener('submit', buyProduct);
-
-//check what product was ordered
-function buyProduct(event) {
-  product = event.target.products.value;
-  for (var i = 0; i < productArray.length; i++){
-    if (productArray[i].id = product) {
-      orderedProducts.push(products[i]);
-    }
-  }
-}
-
 //////////////FOR THE CART PAGE//////////////////////////
 // //for every item in the orderedProducts array do this process:
 // for (var i = 0; i < orderedProducts.length; i++){
@@ -54,8 +40,30 @@ function buyProduct(event) {
 // //create img element for product image
 // }
 
-
 //check to see if there are any ordered products in local storage
 if (localStorage.getAttribute('ordered')){
-  orderedProducts = ordered;
+  orderedProducts = JSON.parse(localStorage.getAttribute('ordered'));
+}
+else {
+  var body = document.getElementById('cart');
+  var p = document.createElement('p');
+  p.innerText = 'Your cart is empty. To select a product go back to the order form.';
+  body.appendChild(p);
+}
+
+///////////FOR THE ORDER PAGE///////////////////////////
+var form = document.getElementById('form');
+form.addEventListener('submit', buyProduct);
+
+//check what product was ordered
+function buyProduct(event) {
+  event.preventDefault();
+  product = event.target.products.value;
+  for (var i = 0; i < productArray.length; i++){
+    if (productArray[i].id = product) {
+      orderedProducts.push(productArray[i]);
+    }
+  }
+  localStorage.setAttribute('ordered', JSON.stringify(orderedProducts));
+  form.reset;
 }
