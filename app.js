@@ -31,15 +31,6 @@ var wineGlass = new Product('Wine glass', 'wineGlass', 'img/wine-glass.jpg');
 var productArray = [bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulhu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep, tauntaun, unicorn, usb, waterCan, wineGlass];
 
 //////////////FOR THE CART PAGE//////////////////////////
-// //for every item in the orderedProducts array do this process:
-// for (var i = 0; i < orderedProducts.length; i++){
-// //create div to hold ordered product info and add to body
-//   var body = document.getElementById('cart');
-//   var tr = document.createElement('tr');
-//   body.appendChild(tr);
-// //create img element for product image
-// }
-
 //check to see if there are any ordered products in local storage
 function ordersPresent(){
   if (localStorage.getAttribute('ordered')){
@@ -52,6 +43,15 @@ function ordersPresent(){
     body.appendChild(p);
   }
 }
+//for every item in the orderedProducts array do this process:
+for (var i = 0; i < orderedProducts.length; i++){
+//create div to hold ordered product info and add to body
+  var body = document.getElementById('cart');
+  var tr = document.createElement('tr');
+  body.appendChild(tr);
+//create img element for product image
+}
+
 ///////////FOR THE ORDER PAGE///////////////////////////
 var form = document.getElementById('form');
 form.addEventListener('submit', buyProduct);
