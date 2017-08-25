@@ -53,6 +53,9 @@ for (var i = 0; i < orderedProducts.length; i++){
   var prodName = document.createElement('p');
   prodName.innerText = orderedProducts[i].name;
   prodName.setAttribute('class', 'float');
+  var button = document.createElement('button');
+  button.innerText = 'Remove from cart';
+  div.appendChild(button);
   div.appendChild(image);
   div.appendChild(prodName);
   body.appendChild(div);
