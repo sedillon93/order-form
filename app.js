@@ -25,7 +25,7 @@ var sweep = new Product('Baby sweeper pajamas', 'sweep', 'img/sweep.png');
 var tauntaun = new Product('Tauntaun sleeping bag', 'tauntaun', 'img/tauntaun.jpg');
 var unicorn = new Product('Unicorn meat', 'unicorn', 'img/unicorn.jpg');
 var usb = new Product('Octopus usb drive', 'usb', 'img/usb.gif');
-var waterCan = new Product('Artistic watering can', 'waterCan', 'img/water-can.jpg');
+var waterCan = new Product('Artistic watering can', 'water-can', 'img/water-can.jpg');
 var wineGlass = new Product('Wine glass', 'wineGlass', 'img/wine-glass.jpg');
 
 var productArray = [bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulhu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep, tauntaun, unicorn, usb, waterCan, wineGlass];
@@ -51,6 +51,12 @@ for (var i = 0; i < orderedProducts.length; i++){
   var tr = document.createElement('tr');
   body.appendChild(tr);
 //create img element for product image
+}
+
+//button to remove item from cart
+function deleteItem(event){
+  var id = event.target.id;
+  var item = document.getElementById(id);
 }
 
 ///////////FOR THE ORDER PAGE///////////////////////////
