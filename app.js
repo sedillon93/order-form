@@ -68,11 +68,11 @@ function buyProduct(event) {
   event.preventDefault();
   var product = event.target.products.value;
   for (var i = 0; i < productArray.length; i++){
-    if (productArray[i].id = product) {
+    if (productArray[i].id === product) {
       orderedProducts.push(productArray[i].id);
     }
   }
   localStorage.setItem('ordered', JSON.stringify(orderedProducts));
-  console.log(localStorage.setItem('ordered', JSON.stringify(orderedProducts)));
+  var form = document.getElementById('form');
   form.reset;
 }
