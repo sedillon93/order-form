@@ -50,7 +50,9 @@ for (var i = 0; i < orderedProducts.length; i++){
   var div = document.createElement('div');
   var image = document.createElement('img');
   image.setAttribute('src', orderedProducts[i].path);
+  console.log(orderedProducts[i].path);
   div.appendChild(image);
+  body.appendChild(div);
 }
 
 // button to remove item from cart
