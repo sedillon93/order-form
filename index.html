@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <style>
+    h1{
+      color:#9033ce
+    }
+    h2{
+      color:#9033ce
+    }
+    h3{
+      color:#6241f4;
+    }
+    </style>
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Order form for busMall </title>
   </head>
   <header>
-    <a src="cart.html"></a>
-    <h1>INSTRUCTIONS</h1>
-      <p>Please select an item and add to your cart</p>
+    <a href="cart.html"> </a>
+    <h1>WELCOME TO BUS MALL</h1>
+      <h2>Please select an item and add to your cart</h2>
   </header>
   <body>
     <div class="button">
-      <button type="submit">Add to Cart</button>
     </div>
     <form id="form">
-    <fieldset>
-      <label for="quantity">Quantity:</label>
+      <h3><label for="quantity">Quantity:</label></h3>
       <input type="number" min="0" max="25">
-      <label for="products">Products</label>
-      <select name="products" form="dropdown">
+      <br>
+      <h3><label for="products">Products</label></h3>
+      <button type="submit">Add to Cart</button>
+      <select name="products" id="dropdown">
+        <option value="selection">Select</option>
         <option value="bag">Bag</option>
         <option value="boots">Boots</option>
         <option value="bathroom">Bathroom</option>
@@ -40,25 +52,33 @@
         <option value="waterCan">Water-can</option>
         <option value="wineGlass">Wine-glass</option>
       </select>
-    </fieldset
     <table>
       <fieldset>
         <tr>Name:</tr><br>
         <input type="text" name=" " value=" ">
-        <input type="submit" value="Submit">
         <br>
         <tr>Address:</tr><br>
         <input type="text" name=" " value" ">
         <br>
-        <tr>City:<tr><br>
+        <tr>City:<t/r><br>
         <input type="text" name=" " value=" ">
         <br>
-         <tr>Zip:<tr><br>
-        <input type="number" name=" " value=" ">
+        <tr>State</tr><br>
+        <input type="text" name=" " value=" ">
         <br>
-        <tr>Credit Card Number:<tr><br>
-        <input type="text" name="" value"">
-        <br><br>
+         <tr>Zip:</tr><br>
+        <input type="number" name=" " value=" ">
+      <br>
+      <br>
+      <!-- <input class="option" disabled="disabled" id="credit"> -->
+      <input class="cc-number" maxlength="16" name="credit-number" pattern="\d*" placeholder="Card Number" type="tel" /><br>
+      <br>
+      <br><input class="cc-expires" maxlength="7" name="credit-expires" pattern="\d*" placeholder="MM / YY" type="tel" /><br>
+      <br>
+      <br><input class="cc-cvc" maxlength="4" name="credit-cvc" pattern="\d*" placeholder="CVC" type="tel" /><br>
+      </form>
+      <input class="form-submit" type="submit" value="Pay Now" />
+      </div>
     </fieldset>
     </table>
     </form>
