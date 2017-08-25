@@ -54,6 +54,7 @@ for (var i = 0; i < orderedProducts.length; i++){
   prodName.innerText = orderedProducts[i].name;
   prodName.setAttribute('class', 'float');
   var button = document.createElement('button');
+  button.setAttribute('id', 'remove');
   button.innerText = 'Remove from cart';
   div.appendChild(button);
   div.appendChild(image);
@@ -62,7 +63,10 @@ for (var i = 0; i < orderedProducts.length; i++){
 }
 
 // button to remove item from cart
-// function deleteItem(event){
-//   var id = event.target.id;
-//   var item = document.getElementById(id);
-// }
+function deleteItem(event){
+  var id = event.target.id;
+  var item = document.getElementById(id);
+}
+
+var remove = document.getElementById('remove');
+remove.addEventListener('click', deleteItem);
