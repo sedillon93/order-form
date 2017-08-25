@@ -4,3 +4,10 @@
 .float {
   float: right;
 }
+
+#heading h1 h2{
+  background:#a3c3f7
+  font-family: 'Patua One',monospace;
+  font-size: 40px;
+  color:#13265b
+}

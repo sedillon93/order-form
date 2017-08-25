@@ -1,85 +1,77 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-    h1{
-      color:#9033ce
-    }
-    h2{
-      color:#9033ce
-    }
-    h3{
-      color:#6241f4;
-    }
-    </style>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
     <title>Order form for busMall </title>
   </head>
-  <header>
-    <a href="cart.html">Cart</a>
-    <h1>WELCOME TO BUS MALL</h1>
-      <h2>Please select an item and add to your cart</h2>
-  </header>
-  <body>
-    <div class="button">
-    </div>
-    <form id="form">
-      <h3><label for="quantity">Quantity:</label></h3>
-      <input type="number" min="0" max="25">
-      <br>
-      <h3><label for="products">Products</label></h3>
-      <button type="submit">Add to Cart</button>
-      <select name="products" id="dropdown">
-        <option value="selection">Select</option>
-        <option value="bag">Bag</option>
-        <option value="boots">Boots</option>
-        <option value="bathroom">Bathroom</option>
-        <option value="banana">Banana</option>
-        <option value="breakfast">Breakfast</option>
-        <option value="bubblegum">Bubblegum</option>
-        <option value="chair">Chair</option>
-        <option value="cthulhu">Cthulhu</option>
-        <option value="dogDuck">Dog-duck</option>
-        <option value="dragon">Dragon</option>
-        <option value="pen">Pen</option>
-        <option value="petSweep">Sweep</option>
-        <option value="scissors">Scissors</option>
-        <option value="shark">Shark</option>
-        <option value="sweep">Sweep</option>
-        <option value="tauntaun">Tauntaun</option>
-        <option value="unicorn">Unicorn</option>
-        <option value="usb">Usb</option>
-        <option value="waterCan">Water-can</option>
-        <option value="wineGlass">Wine-glass</option>
-      </select>
-    <table>
-      <fieldset>
-        <tr>Name:</tr><br>
-        <input type="text" name=" " value=" ">
-        <br>
-        <tr>Address:</tr><br>
-        <input type="text" name=" " value" ">
-        <br>
-        <tr>City:<t/r><br>
-        <input type="text" name=" " value=" ">
-        <br>
-        <tr>State</tr><br>
-        <input type="text" name=" " value=" ">
-        <br>
-         <tr>Zip:</tr><br>
-        <input type="number" name=" " value=" ">
-      <br>
-      <br>
-      <input class="cc-number" maxlength="16" name="credit-number" pattern="\d*" placeholder="Card Number" type="tel" /><br>
-      <br>
-      <br><input class="cc-expires" maxlength="7" name="credit-expires" pattern="\d*" placeholder="MM / YY" type="tel" /><br>
-      <br>
-      <br><input class="cc-cvc" maxlength="4" name="credit-cvc" pattern="\d*" placeholder="CVC" type="tel" /><br>
-      </form>
-      <input class="form-submit" type="submit" value="Pay Now" />
+    <header>
+      <div id="heading">
+      <a href="cart.html">Cart</a>
+      <h1>WELCOME TO BUS MALL</h1>
+        <h2>Please select an item and add to your cart</h2>
       </div>
-    </fieldset>
-    </table>
+      </header>
+    <body>
+      <div class="button">
+      </div>
+      <form id="form">
+        <h3 id="h3"><label for="quantity">Quantity:</label></h3>
+        <input type="number" min="0" max="25">
+        <br>
+        <h3 id="h3"><label for="products">Products</label></h3>
+        <button type="submit">Add to Cart</button>
+        <select name="products" id="dropdown">
+          <option value="selection">Select</option>
+          <option value="bag">Bag</option>
+          <option value="boots">Boots</option>
+          <option value="bathroom">Bathroom</option>
+          <option value="banana">Banana</option>
+          <option value="breakfast">Breakfast</option>
+          <option value="bubblegum">Bubblegum</option>
+          <option value="chair">Chair</option>
+          <option value="cthulhu">Cthulhu</option>
+          <option value="dogDuck">Dog-duck</option>
+          <option value="dragon">Dragon</option>
+          <option value="pen">Pen</option>
+          <option value="petSweep">Sweep</option>
+          <option value="scissors">Scissors</option>
+          <option value="shark">Shark</option>
+          <option value="sweep">Sweep</option>
+          <option value="tauntaun">Tauntaun</option>
+          <option value="unicorn">Unicorn</option>
+          <option value="usb">Usb</option>
+          <option value="waterCan">Water-can</option>
+          <option value="wineGlass">Wine-glass</option>
+        </select>
+        <table>
+        <fieldset>
+          <tr>Name:</tr><br>
+          <input type="text" name=" " value=" ">
+          <br>
+          <tr>Address:</tr><br>
+          <input type="text" name=" " value" ">
+          <br>
+          <tr>City:<t/r><br>
+          <input type="text" name=" " value=" ">
+          <br>
+          <tr>State</tr><br>
+          <input type="text" name=" " value=" ">
+          <br>
+           <tr>Zip:</tr><br>
+          <input type="number" name=" " value=" ">
+        <br>
+        <br>
+        <input class="cc-number" maxlength="16" name="credit-number" pattern="\d*" placeholder="Card Number" type="tel" /><br>
+        <br>
+        <br><input class="cc-expires" maxlength="7" name="credit-expires" pattern="\d*" placeholder="MM / YY" type="tel" /><br>
+        <br>
+        <br><input class="cc-cvc" maxlength="4" name="credit-cvc" pattern="\d*" placeholder="CVC" type="tel" /><br>
+        </form>
+        <input class="form-submit" type="submit" value="Pay Now" />
+        </div>
+      </fieldset>
+      </table>
     </form>
   </body>
   <script src="app.js" charset="utf-8"></script>
