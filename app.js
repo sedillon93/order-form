@@ -44,7 +44,7 @@ function ordersPresent(){
   // }
 }
 ordersPresent();
-//for every item in the orderedProducts array do this process:
+// for every item in the orderedProducts array do this process:
 for (var i = 0; i < orderedProducts.length; i++){
 //create div to hold ordered product info and add to body
   var body = document.getElementById('cart');
@@ -66,12 +66,10 @@ form.addEventListener('submit', buyProduct);
 //check what product was ordered
 function buyProduct(event) {
   event.preventDefault();
-  console.log(event.target);
-  console.log(event.target.products.value);
   var product = event.target.products.value;
   for (var i = 0; i < productArray.length; i++){
     if (productArray[i].id = product) {
-      orderedProducts.push(productArray[i]);
+      orderedProducts.push(productArray[i].id);
     }
   }
   localStorage.setItem('ordered', JSON.stringify(orderedProducts));
