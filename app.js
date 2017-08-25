@@ -73,6 +73,6 @@ function buyProduct(event) {
     }
   }
   localStorage.setItem('ordered', JSON.stringify(orderedProducts));
-  console.log(localStorage.setItem('ordered', JSON.stringify(orderedProducts)));
+  var form = document.getElementById('form');
   form.reset;
 }
