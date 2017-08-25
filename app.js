@@ -67,8 +67,8 @@ form.addEventListener('submit', buyProduct);
 function buyProduct(event) {
   event.preventDefault();
   console.log(event.target);
-  console.log(event.target.fieldset);
-  product = event.target.products.value;
+  console.log(event.target.products.value);
+  var product = event.target.products.value;
   for (var i = 0; i < productArray.length; i++){
     if (productArray[i].id = product) {
       orderedProducts.push(productArray[i]);
