@@ -50,8 +50,11 @@ for (var i = 0; i < orderedProducts.length; i++){
   var div = document.createElement('div');
   var image = document.createElement('img');
   image.setAttribute('src', orderedProducts[i].path);
-  console.log(orderedProducts[i].path);
+  var prodName = document.createElement('p');
+  prodName.innerText = orderedProducts[i].name;
+  prodName.setAttribute('class', 'float');
   div.appendChild(image);
+  div.appendChild(prodName);
   body.appendChild(div);
 }
 
