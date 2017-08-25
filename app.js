@@ -30,37 +30,6 @@ var wineGlass = new Product('Wine glass', 'wineGlass', 'img/wine-glass.jpg');
 
 var productArray = [bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulhu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep, tauntaun, unicorn, usb, waterCan, wineGlass];
 
-//////////////FOR THE CART PAGE//////////////////////////
-//check to see if there are any ordered products in local storage
-function ordersPresent(){
-  if (localStorage.getItem('ordered')){
-    orderedProducts = JSON.parse(localStorage.getItem('ordered'));
-  }
-  // else {
-  //   var body = document.getElementById('cart');
-  //   var p = document.createElement('p');
-  //   p.innerText = 'Your cart is empty. To select a product go back to the order form.';
-  //   body.appendChild(p);
-  // }
-}
-ordersPresent();
-// for every item in the orderedProducts array do this process:
-var body = document.getElementById('cart');
-for (var i = 0; i < orderedProducts.length; i++){
-//create div to hold ordered product info and add to body
-  var div = document.createElement('div');
-  var image = document.createElement('img');
-  image.setAttribute('src', orderedProducts[i].path);
-  div.appendChild(image);
-}
-
-//button to remove item from cart
-function deleteItem(event){
-  var id = event.target.id;
-  var item = document.getElementById(id);
-}
-
-///////////FOR THE ORDER PAGE///////////////////////////
 var form = document.getElementById('form');
 form.addEventListener('submit', buyProduct);
 
