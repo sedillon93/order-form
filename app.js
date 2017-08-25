@@ -43,15 +43,16 @@ function ordersPresent(){
   //   body.appendChild(p);
   // }
 }
-ordersPresent();
-// for every item in the orderedProducts array do this process:
-for (var i = 0; i < orderedProducts.length; i++){
-//create div to hold ordered product info and add to body
-  var body = document.getElementById('cart');
-  var tr = document.createElement('tr');
-  body.appendChild(tr);
-//create img element for product image
-}
+// ordersPresent();
+// // for every item in the orderedProducts array do this process:
+// var body = document.getElementById('cart');
+// for (var i = 0; i < orderedProducts.length; i++){
+// //create div to hold ordered product info and add to body
+//   var div = document.createElement('div');
+//   var image = document.createElement('img');
+//   img.setAttribute('src', )
+// //create img element for product image
+// }
 
 //button to remove item from cart
 function deleteItem(event){
@@ -69,10 +70,9 @@ function buyProduct(event) {
   var product = event.target.products.value;
   for (var i = 0; i < productArray.length; i++){
     if (productArray[i].id === product) {
-      orderedProducts.push(productArray[i].id);
+      orderedProducts.push(productArray[i]);
     }
   }
   localStorage.setItem('ordered', JSON.stringify(orderedProducts));
-  var form = document.getElementById('form');
-  form.reset;
+  form.reset();
 }
