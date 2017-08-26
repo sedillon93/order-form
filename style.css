@@ -7,6 +7,7 @@
   font-size: 40px;
   color:#13265b
 }
+/*ABOVE THIS LINE IS MICHELLE'S TERRITORY*/
 #funkyBus{
   float:right;
   width:40%;
@@ -15,9 +16,10 @@
 #cart{
   max-width:1%
  float:left;
- 
+
 }
-remove{
+/*BUTTONS ARE MICHELLE'S TERRITORY*/
+.remove{
   background-color:#14bee0
   border: none;
   color: white;
@@ -30,4 +32,16 @@ remove{
   cursor: pointer;
   .button2:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/*IMAGES ARE SHANNON'S TERRITORY*/
+img {
+  width: 200px;
+  height: 200px;
+}
+.float {
+  float: right;
+}
+button {
+  float: right;
 }
