@@ -72,6 +72,7 @@ function deleteItem(event){
     if (orderedProducts[i].id === id) {
       var item = document.getElementsByClassName(orderedProducts[i].id)[0];
       body.removeChild(item);
+      orderedProducts.splice(i, 1);
     }
   }
 }
