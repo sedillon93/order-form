@@ -43,6 +43,8 @@ function buyProduct(event) {
   for (var i = 0; i < productArray.length; i++){
     if (productArray[i].id === product) {
       orderedProducts.push(productArray[i]);
+      var quantity = event.target.quantity.value;
+      orderedProducts[i].quantity = event.target.quantity.value;
     }
   }
   localStorage.setItem('ordered', JSON.stringify(orderedProducts));
