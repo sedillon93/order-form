@@ -34,7 +34,7 @@ header{
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-
-.button2:hover {
+}
+.remove:hover{
   box-shadow: 0 12px 16px 0 rgba(113,24,245,0.24),0 17px 50px 0 rgba(113,24,245,0.19);
 }
