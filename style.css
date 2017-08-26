@@ -1,15 +1,21 @@
 
 
-#heading h1 h2{
+#heading {
   background:#a3c3f7
   font-family: 'Patua One',monospace;
+  text-align:center;
   font-size: 40px;
   color:#13265b
 }
 #funkyBus{
   float:right;
   width:40%;
-  padding-right: 40px;
+  padding-right: 200px;
+}
+#cart{
+  max-width:1%
+ float:left;
+ 
 }
 remove{
   background-color:#14bee0
