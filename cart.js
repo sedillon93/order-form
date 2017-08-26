@@ -35,12 +35,7 @@ function ordersPresent(){
   if (localStorage.getItem('ordered')){
     orderedProducts = JSON.parse(localStorage.getItem('ordered'));
   }
-  // else {
-  //   var body = document.getElementById('cart');
-  //   var p = document.createElement('p');
-  //   p.innerText = 'Your cart is empty. To select a product go back to the order form.';
-  //   body.appendChild(p);
-  // }
+
 }
 ordersPresent();
 // for every item in the orderedProducts array do this process:
@@ -73,7 +68,6 @@ function deleteItem(event){
       var item = document.getElementsByClassName(orderedProducts[i].id)[0];
       body.removeChild(item);
       orderedProducts.splice(i, 1);
-      var test = localStorage.setItem('ordered', JSON.stringify(orderedProducts));
       location.reload();
     }
   }
