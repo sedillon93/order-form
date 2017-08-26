@@ -36,12 +36,18 @@ form.addEventListener('submit', buyProduct);
 //check what product was ordered
 function buyProduct(event) {
   event.preventDefault();
+  var quantity = event.target.quantity.value;
   var product = event.target.products.value;
+  if (localStorage.getItem('ordered')){
+    orderedProducts = JSON.parse(localStorage.getItem('ordered'));
+  }
   for (var i = 0; i < productArray.length; i++){
     if (productArray[i].id === product) {
+      productArray[i].quantity = quantity;
       orderedProducts.push(productArray[i]);
     }
   }
+
   localStorage.setItem('ordered', JSON.stringify(orderedProducts));
   form.reset();
 }
