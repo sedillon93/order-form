@@ -35,17 +35,13 @@ function ordersPresent(){
   if (localStorage.getItem('ordered')){
     orderedProducts = JSON.parse(localStorage.getItem('ordered'));
   }
-  // else {
-  //   var body = document.getElementById('cart');
-  //   var p = document.createElement('p');
-  //   p.innerText = 'Your cart is empty. To select a product go back to the order form.';
-  //   body.appendChild(p);
-  // }
+
 }
 ordersPresent();
 // for every item in the orderedProducts array do this process:
 var body = document.getElementById('cart');
 for (var i = 0; i < orderedProducts.length; i++){
+  console.log(JSON.parse(localStorage.getItem('quantity[i])')));
 // create div to hold ordered product info and add to body
   var div = document.createElement('div');
   div.setAttribute('class', orderedProducts[i].id);
@@ -54,11 +50,14 @@ for (var i = 0; i < orderedProducts.length; i++){
   var prodName = document.createElement('p');
   prodName.innerText = orderedProducts[i].name;
   prodName.setAttribute('class', 'float');
+  var quantity = document.createElement('p');
+  quantity.innerText = quantity[i];
   var button = document.createElement('button');
   button.setAttribute('class', 'remove');
   button.innerText = 'Remove from cart';
   button.setAttribute('id', orderedProducts[i].id);
   button.addEventListener('click', deleteItem);
+  div.appendChild(quantity);
   div.appendChild(button);
   div.appendChild(image);
   div.appendChild(prodName);
@@ -73,7 +72,6 @@ function deleteItem(event){
       var item = document.getElementsByClassName(orderedProducts[i].id)[0];
       body.removeChild(item);
       orderedProducts.splice(i, 1);
-      var test = localStorage.setItem('ordered', JSON.stringify(orderedProducts));
       location.reload();
     }
   }
