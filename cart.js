@@ -35,7 +35,12 @@ function ordersPresent(){
   if (localStorage.getItem('ordered')){
     orderedProducts = JSON.parse(localStorage.getItem('ordered'));
   }
-
+  // else {
+  //   var body = document.getElementById('cart');
+  //   var p = document.createElement('p');
+  //   p.innerText = 'Your cart is empty. To select a product go back to the order form.';
+  //   body.appendChild(p);
+  // }
 }
 ordersPresent();
 // for every item in the orderedProducts array do this process:
@@ -47,8 +52,10 @@ for (var i = 0; i < orderedProducts.length; i++){
   var image = document.createElement('img');
   image.setAttribute('src', orderedProducts[i].path);
   var prodName = document.createElement('p');
-  prodName.innerText = orderedProducts[i].name;
+  prodName.innerText = 'Product: ' + orderedProducts[i].name;
   prodName.setAttribute('class', 'float');
+  var quantity = document.createElement('p');
+  quantity.innerText = 'Quantity: ' + orderedProducts[i].quantity;
   var button = document.createElement('button');
   button.setAttribute('class', 'remove');
   button.innerText = 'Remove from cart';
@@ -57,6 +64,7 @@ for (var i = 0; i < orderedProducts.length; i++){
   div.appendChild(button);
   div.appendChild(image);
   div.appendChild(prodName);
+  div.appendChild(quantity);
   body.appendChild(div);
 }
 
@@ -68,6 +76,7 @@ function deleteItem(event){
       var item = document.getElementsByClassName(orderedProducts[i].id)[0];
       body.removeChild(item);
       orderedProducts.splice(i, 1);
+      localStorage.setItem('ordered', JSON.stringify(orderedProducts));
       location.reload();
     }
   }
