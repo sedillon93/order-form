@@ -25,7 +25,7 @@ var sweep = new Product('Baby sweeper pajamas', 'sweep', 'img/sweep.png');
 var tauntaun = new Product('Tauntaun sleeping bag', 'tauntaun', 'img/tauntaun.jpg');
 var unicorn = new Product('Unicorn meat', 'unicorn', 'img/unicorn.jpg');
 var usb = new Product('Octopus usb drive', 'usb', 'img/usb.gif');
-var waterCan = new Product('Artistic watering can', 'water-can', 'img/water-can.jpg');
+var waterCan = new Product('Artistic watering can', 'waterCan', 'img/water-can.jpg');
 var wineGlass = new Product('Wine glass', 'wineGlass', 'img/wine-glass.jpg');
 
 var productArray = [bag, banana, bathroom, boots, breakfast, bubblegum, chair, cthulhu, dogDuck, dragon, pen, petSweep, scissors, shark, sweep, tauntaun, unicorn, usb, waterCan, wineGlass];
@@ -48,13 +48,17 @@ var body = document.getElementById('cart');
 for (var i = 0; i < orderedProducts.length; i++){
 // create div to hold ordered product info and add to body
   var div = document.createElement('div');
+  div.setAttribute('class', orderedProducts[i].id);
   var image = document.createElement('img');
   image.setAttribute('src', orderedProducts[i].path);
   var prodName = document.createElement('p');
   prodName.innerText = orderedProducts[i].name;
   prodName.setAttribute('class', 'float');
   var button = document.createElement('button');
+  button.setAttribute('class', 'remove');
   button.innerText = 'Remove from cart';
+  button.setAttribute('id', orderedProducts[i].id);
+  button.addEventListener('click', deleteItem);
   div.appendChild(button);
   div.appendChild(image);
   div.appendChild(prodName);
@@ -62,7 +66,12 @@ for (var i = 0; i < orderedProducts.length; i++){
 }
 
 // button to remove item from cart
-// function deleteItem(event){
-//   var id = event.target.id;
-//   var item = document.getElementById(id);
-// }
+function deleteItem(event){
+  var id = event.target.id;
+  for (var i = 0; i < orderedProducts.length; i++){
+    if (orderedProducts[i].id === id) {
+      var item = document.getElementsByClassName(orderedProducts[i].id)[0];
+      body.removeChild(item);
+    }
+  }
+}
