@@ -43,10 +43,11 @@ function buyProduct(event) {
   }
   for (var i = 0; i < productArray.length; i++){
     if (productArray[i].id === product) {
+      productArray[i].quantity = quantity;
       orderedProducts.push(productArray[i]);
     }
   }
-  // orderedProducts[i].quantity = quantity;
+
   localStorage.setItem('ordered', JSON.stringify(orderedProducts));
   form.reset();
 }
