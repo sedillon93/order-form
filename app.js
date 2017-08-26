@@ -37,7 +37,7 @@ form.addEventListener('submit', buyProduct);
 function buyProduct(event) {
   event.preventDefault();
   var product = event.target.products.value;
-  if (localStorage.ordered){
+  if (localStorage.getItem('ordered')){
     orderedProducts = JSON.parse(localStorage.getItem('ordered'));
   }
   for (var i = 0; i < productArray.length; i++){
