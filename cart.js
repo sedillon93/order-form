@@ -73,9 +73,8 @@ function deleteItem(event){
       var item = document.getElementsByClassName(orderedProducts[i].id)[0];
       body.removeChild(item);
       orderedProducts.splice(i, 1);
-      console.log(orderedProducts.splice(i, 1));
       var test = localStorage.setItem('ordered', JSON.stringify(orderedProducts));
-      console.log(test);
+      location.reload();
     }
   }
 }
