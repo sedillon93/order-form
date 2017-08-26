@@ -52,8 +52,10 @@ for (var i = 0; i < orderedProducts.length; i++){
   var image = document.createElement('img');
   image.setAttribute('src', orderedProducts[i].path);
   var prodName = document.createElement('p');
-  prodName.innerText = orderedProducts[i].name;
+  prodName.innerText = 'Product: ' + orderedProducts[i].name;
   prodName.setAttribute('class', 'float');
+  var quantity = document.createElement('p');
+  quantity.innerText = 'Quantity: ' + orderedProducts[i].quantity;
   var button = document.createElement('button');
   button.setAttribute('class', 'remove');
   button.innerText = 'Remove from cart';
@@ -62,6 +64,7 @@ for (var i = 0; i < orderedProducts.length; i++){
   div.appendChild(button);
   div.appendChild(image);
   div.appendChild(prodName);
+  div.appendChild(quantity);
   body.appendChild(div);
 }
 
