@@ -1,13 +1,18 @@
+* {
+  box-sizing: border-box;
+}
 header, aside, section, footer,{
   display: block;
   }
 
 body{
   background-color:#f7fca1;
+  margin: 0;
 }
 
 header{
   background:#a3c3f7;
+  padding: 20px;
 }
 
 #header {
@@ -22,6 +27,19 @@ header{
   float:right;
   width:50%;
   padding-right: 120px;
+}
+
+a {
+  font-size: 20px;
+  float: left;
+}
+
+#shopping {
+  font-size: 52px;
+}
+
+#view-orders {
+  font-size: 32px;
 }
 
 .remove{
