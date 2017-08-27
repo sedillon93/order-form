@@ -34,12 +34,12 @@ a {
   float: left;
 }
 
-#shopping {
-  font-size: 52px;
+h1 {
+  font-size: 60px;
 }
 
-#view-orders {
-  font-size: 32px;
+h2 {
+  font-size: 28px;
 }
 
 .remove{
