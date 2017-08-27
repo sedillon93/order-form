@@ -19,8 +19,16 @@ form {
   padding: 25px 0px 40px 40px;
 }
 
+h3 {
+  margin: 0;
+}
+
 span {
   padding: 5px 0;
+}
+
+#quantity {
+  margin-bottom: 30px;
 }
 
 #header {
@@ -40,6 +48,11 @@ span {
 a {
   font-size: 20px;
   float: left;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
 }
 
 h1 {

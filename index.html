@@ -16,8 +16,6 @@
       <div class="button">
       </div>
       <form id="form">
-        <h3 id="h3"><label for="quantity">Quantity:</label></h3>
-        <input name="quantity" type="number" min="0" max="25" required>
         <br>
         <h3 id="h3"><label for="products">Products</label></h3>
         <select name="products" id="dropdown">
@@ -44,7 +42,11 @@
           <option value="wineGlass">Wine-glass</option>
         </select>
         <button type="submit">Add to Cart</button>
+        <br>
+        <span><label for="quantity">Quantity:</label></span>
+        <input name="quantity" type="number" min="0" max="25" required  id="quantity">
         <img id="funkyBus"src="volkswagen-158463_1280.png"/>
+        <h3>Payment Information</h3>
         <span><label for="name">Name: </label></span>
         <input type="text" name="" value="" placeholder="Full Name">
         <span><label for="name">Address: </label></span>
@@ -54,14 +56,18 @@
         <span><label for="name">State: </label></span>
         <input type="text" name="" value="">
         <span><label for="name">Zip: </label></span>
-        <input type="number" name="" value="">
+        <input type="number" name="" value="" placeholder="#####-####">
         <br>
+        <span><label for="cc-number">Credit Card Number</label></span>
+        <input class="cc-number" maxlength="16" name="credit-number" pattern="\d*" placeholder="Card Number" type="tel" />
         <br>
-        <input class="cc-number" maxlength="16" name="credit-number" pattern="\d*" placeholder="Card Number" type="tel" /><br>
+        <span><label for="credit-expires"></label>Expiration Date</span>
+        <input class="cc-expires" maxlength="7" name="credit-expires" pattern="\d*" placeholder="MM / YY" type="tel" />
         <br>
-        <br><input class="cc-expires" maxlength="7" name="credit-expires" pattern="\d*" placeholder="MM / YY" type="tel" /><br>
+        <span><label for="credit-cvc">CVC</label></span>
+        <input class="cc-cvc" maxlength="4" name="credit-cvc" pattern="\d*" placeholder="###" type="tel" />
         <br>
-        <br><input class="cc-cvc" maxlength="4" name="credit-cvc" pattern="\d*" placeholder="CVC" type="tel" /><br>
+        <span><label></label></span>
         <input class="form-submit" type="submit" value="Pay Now" />
         </form>
         </div>
