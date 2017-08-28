@@ -51,9 +51,10 @@ for (var i = 0; i < orderedProducts.length; i++){
   div.setAttribute('class', orderedProducts[i].id);
   var image = document.createElement('img');
   image.setAttribute('src', orderedProducts[i].path);
+  var prodInfo = document.createElement('div');
+  prodInfo.setAttribute('class', 'prodInfo');
   var prodName = document.createElement('p');
   prodName.innerText = 'Product: ' + orderedProducts[i].name;
-  prodName.setAttribute('class', 'float');
   var quantity = document.createElement('p');
   quantity.innerText = 'Quantity: ' + orderedProducts[i].quantity;
   var button = document.createElement('button');
@@ -61,10 +62,11 @@ for (var i = 0; i < orderedProducts.length; i++){
   button.innerText = 'Remove from cart';
   button.setAttribute('id', orderedProducts[i].id);
   button.addEventListener('click', deleteItem);
+  prodInfo.appendChild(prodName);
+  prodInfo.appendChild(quantity);
   div.appendChild(button);
   div.appendChild(image);
-  div.appendChild(prodName);
-  div.appendChild(quantity);
+  div.appendChild(prodInfo);
   body.appendChild(div);
 }
 
