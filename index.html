@@ -6,7 +6,6 @@
     <title>Order form for busMall</title>
   </head>
     <header>
-      <a href="cart.html">Cart</a>
       <div id="header">
       <h1>WELCOME TO BUS MALL</h1>
       <h2>Please select an item and add it to your cart</h2>
@@ -15,6 +14,7 @@
     <body>
       <div class="button">
       </div>
+      <a class="cart"href="cart.html"><button>Check Cart</button></a>
       <form id="form">
         <br>
         <h3 id="h3"><label for="products">Products</label></h3>
@@ -46,7 +46,7 @@
         <span><label for="quantity">Quantity:</label></span>
         <input name="quantity" type="number" min="0" max="25" required  id="quantity">
         <img id="funkyBus"src="volkswagen-158463_1280.png"/>
-        <h3>Payment Information</h3>
+        <h3>Order Information</h3>
         <span><label for="name">Name: </label></span>
         <input type="text" name="" value="" placeholder="Full Name">
         <span><label for="name">Address: </label></span>
@@ -56,8 +56,11 @@
         <span><label for="name">State: </label></span>
         <input type="text" name="" value="">
         <span><label for="name">Zip: </label></span>
-        <input type="number" name="" value="" placeholder="#####-####">
-        <br>
+        <input type="number" name="quantity" min="1" max="9">
+      </form>
+      <fieldset>
+        <legend><h3>Payment Information</h3></legend>
+        <form>
         <span><label for="cc-number">Credit Card Number</label></span>
         <input class="cc-number" maxlength="16" name="credit-number" pattern="\d*" placeholder="Card Number" type="tel" />
         <br>
@@ -68,10 +71,8 @@
         <input class="cc-cvc" maxlength="4" name="credit-cvc" pattern="\d*" placeholder="###" type="tel" />
         <br>
         <span><label></label></span>
-        <input class="form-submit" type="submit" value="Pay Now" />
-        </form>
-        </div>
-      </table>
+        <button><input class="form-submit" type="submit" value="Pay Now"/></button>
+      </fieldset>
     </form>
   </body>
   <script src="app.js" charset="utf-8"></script>
