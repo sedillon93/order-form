@@ -20,36 +20,68 @@ form {
   padding: 25px 0px 40px 40px;
 }
 
+.form-submit{
+  background-color:#f7fca1;
+  color: #0000FF;
+}
+
 h3 {
   margin: 0;
+  font-family: sans-serif;
+  font-size: 28px;
 }
 
 span {
   padding: 5px 0;
 }
 
+.cart{
+  float: right;
+  margin-top: 6%;
+  margin-right: 5%;
+}
+
 #quantity {
   margin-bottom: 30px;
 }
 
-#header {
+#header{
   font-family: 'Patua One',monospace;
   text-align:center;
-  font-size: 40px;
-  color:#13265b
+  font-size: 60px;
+  color:#13265b;
   padding: 40px;
+  box-shadow: 0 12px 16px 0 rgba(113,24,245,0.24),0 17px 50px 0 rgba(113,24,245,0.19);
 }
 
 #funkyBus{
   float:right;
-  width:50%;
+  width:70%;
   padding-right: 120px;
 }
 
-a {
-  font-size: 20px;
-  float: left;
+button{
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
   text-decoration: none;
+  outline: none;
+  color: #E0FFFF;
+  background-color: #0000FF;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 6px #999;
+  box-shadow: 0 12px 16px 0 rgba(113,24,245,0.24),0 17px 50px 0 rgba(113,24,245,0.19);
+}
+
+.prodInfo{
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  float: right;
+  padding: 50px 100px 0 0;
 }
 
 a:hover {
@@ -58,16 +90,18 @@ a:hover {
 
 h1 {
   font-size: 60px;
+  font-family: 'Patua One',monospace;
 }
 
 h2 {
   font-size: 28px;
+  font-family: 'Patua One',monospace;
 }
 
 .remove{
-  background-color:#14bee0
+  background-color:#0000FF;
   border: none;
-  color: blue;
+  color: #E0FFFF;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -76,17 +110,12 @@ h2 {
   margin: 50px 100px 0 0;
   float: right;
 }
-  .remove:hover {
+.remove:hover {
   box-shadow: 0 12px 16px 0 rgba(113,24,245,0.24),0 17px 50px 0 rgba(113,24,245,0.19);
 }
 
-.prodInfo {
-  float: right;
-  padding: 50px 100px 0 0;
-}
-
 p {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 img {
